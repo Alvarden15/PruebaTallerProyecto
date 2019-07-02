@@ -20,7 +20,7 @@ namespace PruebaTallerProyecto.Controllers
             
             //Se utiliza un HttpClient
             using(var cliente= new HttpClient()){
-                //Se llama a la URL de la API
+                //Se llama a la URL de la API (Si tiene URL, agrega el http:// o el https://. Si es solo un archivo, no agreges el prefijo)
                 cliente.BaseAddress= new Uri("http://52.167.187.20/api/");
                 
                 //Se invoca el metodo Get, especificando de que controlador
