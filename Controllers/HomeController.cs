@@ -21,7 +21,8 @@ namespace PruebaTallerProyecto.Controllers
             //Se utiliza un HttpClient
             using(var cliente= new HttpClient()){
                 //Se llama a la URL de la API
-                cliente.BaseAddress= new Uri("12.31.2.3/api/");
+                cliente.BaseAddress= new Uri("http://52.167.187.20/api/");
+                
                 //Se invoca el metodo Get, especificando de que controlador
                 var task=cliente.GetAsync("values");
                 //Se obtiene el resultado
