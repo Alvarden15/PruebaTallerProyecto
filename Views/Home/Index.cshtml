@@ -1,4 +1,4 @@
-﻿@model IEnumerable<String>
+﻿
 
 @{
     ViewData["Title"] = "Primera pagina";
@@ -7,27 +7,6 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <span>@Html.ValidationSummary(true, "", new { @class = "text-danger" })</span>
-    </div>
-   
-    <div class="col-md-3">
-        <span>
-            Generar codigo:
-        </span>
-            <h2>
-                @Model.ElementAt(2)
-            </h2>
-        </div>
-
-        <form asp-action="Index">
-            <input type="submit" value="Generar codigo" class="btn btn-info">
-
-        </form>
-
 
 </div>
 

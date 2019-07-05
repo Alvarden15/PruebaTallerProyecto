@@ -1,13 +1,47 @@
-﻿@{
+﻿@model IEnumerable<Int32>
+
+@{
     ViewData["Title"] = "Segunda Pagina";
 }
-<body>
-<h1>@ViewData["Title"]</h1>
+<head>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#recargar').click(function(){
+                document.location.reload(true);
+            });
 
-<p>Use this page to detail your site's privacy policy.</p>
-<p>Si ves esto, es que le servicio fue exitosamente movida al Kubernetes. No se como esto teminaria, pero fue bien. Al menos</p>
-<span>Nota: </span>
-<label>@ViewData["numero"]</label>
-<h3>@ViewData["numero"]</h3>
+        });
+
+    </script>
+
+</head>
+
+<body>
+<div class="text-center">
+    <h1 class="display-4">Genera codigo aqui</h1>
+    
+
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <span>@Html.ValidationSummary(true, "", new { @class = "text-danger" })</span>
+    </div>
+    <div class="offset-md-4 col-md-4">
+        <h3>
+            @Model.ElementAt(0)
+        </h3>
+        
+    </div>
+
+</div>
+<div class="row">
+   
+    <div class="offset-md-4 col-md-4">
+        
+        <input type="button" value="Generar" onClick="document.location.reload(true)" class="btn btn-secondary">
+    </div>
+    
+
+</div>
 
 </body>
